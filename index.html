@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Название</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Статистика</h1>
+				</div>
+			</div>
+			<div class="row menu align-items-center">
+				 <div class="col-sm-3 menu__logo">
+				 	<a href="#">
+				 		<img src="img/logo.png" alt="Logo"/>
+				 	</a>
+				 </div>
+				 <div class="col-sm-5 offset-sm-1 menu__links">
+				 	<a class="menu__links_a--active" href="#">Вопросы</a>
+				 	<a href="#">Миссии</a>
+				 	<a href="#">Предложения</a>
+				 </div>
+			</div>
+		</div>
+	</header>
+	<section class="main-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 data-sidebar">
+					<h4>Вопросы</h4>
+					<div class="data-sidebar__text"></div>
+				</div>
+				<div class="before-click col-sm-8">
+					<div>
+						<img src="img/beforeClick.png" alt="img"/>
+						<div class="before-click__description">Выберите <span>миссии</span> из списка, чтобы увидеть статистику</div>
+					</div>
+				</div>
+				<div class="offset-sm-1 col-sm-6 data-show">
+					<div class="data-show__title">
+						<h3 class="data-show__question-category">Категория вопроса</h3>
+						<h2 class="data-show__question-name">Название вопроса</h2>
+					</div>
+					<div class="charts"></div>
+					<div class="charts-info"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jQuery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
