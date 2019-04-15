@@ -21,9 +21,6 @@ $(document).ready(function() {
 			let views = parseInt(statistics.views);
 			let users = parseInt(statistics.unique_users);
 			let percents = parseInt(statistics.right_answers_percentage) / 100;
-			// console.log("views " + views);
-			// console.log("unique_users " + users);
-			// console.log("perc " + percents);
 			drawChart(views, views, "#ffbb03", "Количество просмотров");
 			drawChart(views, users, "#ff0000", "Уникальные пользователи");
 			drawChart(views, views * percents, "#2d00eb", "Количество правильных ответов");
@@ -58,9 +55,7 @@ $(document).ready(function() {
 				"X-SESSION-ID": sessionId
 			},
 			success: function(data){
-				// console.log(questions.data.questions[0]);
 				questions = data.data.questions;
-				//getQuestionInfo(questions[0]);
 				displayQuestions();
 			}
 		});
@@ -74,9 +69,7 @@ $(document).ready(function() {
 				"X-SESSION-ID": sessionId
 			},
 			success: function(data){
-				// console.log(questions.data.questions[0]);
 				questions = data;
-				//getQuestionInfo(questions[0]);
 				console.log(data);
 			}
 		});
