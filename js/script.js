@@ -24,9 +24,9 @@ $(document).ready(function() {
 			// console.log("views " + views);
 			// console.log("unique_users " + users);
 			// console.log("perc " + percents);
-			drawChart(views, views, "#ffbb03");
-			drawChart(views, users, "#ff0000");
-			drawChart(views, views * percents, "#2d00eb");
+			drawChart(views, views, "#ffbb03", "Количество просмотров");
+			drawChart(views, users, "#ff0000", "Уникальные пользователи");
+			drawChart(views, views * percents, "#2d00eb", "Количество правильных ответов");
 		});
 	});
 
@@ -35,8 +35,8 @@ $(document).ready(function() {
 			type: "POST",
 	        url: "https://photograd.kz/hackathon/user_login/",
 	        data: '{\
-	            "email" : "kirill.solovyev.98@gmail.com",\
-				"password" : "222656Teddy"\
+	            "email" : "email",\
+				"password" : "password"\
 	        }',
 	        contentType: "application/json; charset=utf-8", 
 	        dataType: "json",
@@ -92,9 +92,9 @@ $(document).ready(function() {
 		}
 	}
 
-	function drawChart(maxValue, curValue, color){
+	function drawChart(maxValue, curValue, color, text){
 		$(".charts").append("<div class='charts__chart' style='height: " + curValue / maxValue * $(".charts").height() + "px; background-color: " + color + "'><div class='charts__value'>" + parseInt(curValue) + "</div></div>");
-		$(".charts-info").append("<div></div>");
+		$(".charts-info").append("<div class='chart-legend'><span style='background-color: " + color + "''></span>" + text + "</div>");
 	}
 
 	function getQuestionInfo(question, functionAfterDone){

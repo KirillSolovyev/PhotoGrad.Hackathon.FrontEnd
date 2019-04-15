@@ -168,7 +168,7 @@ h4{
 }
 
 .data-show__question-category{
-	font-family: "Roboto-Regular";
+	font-family: "Roboto-Light";
 	color: #d2d2d2;
 	font-size: 22px;
 	margin-bottom: 25px;
@@ -180,8 +180,16 @@ h4{
 	font-size: 18px;
 }
 
-.charts{
+.charts-container{
 	height: calc(100% - 150px);
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.charts{
+	height: 100%;
 	width: 40%;
 	display: flex;
 	justify-content: space-between;
@@ -189,7 +197,7 @@ h4{
 }
 
 .charts__chart{
-	width: 35px;
+	width: 30px;
 	text-align: center;
 }
 
@@ -199,6 +207,30 @@ h4{
 	font-family: "Roboto-Light";
 	font-size: 14px;
 	margin-top: -30px;
+}
+
+.charts-info{
+	width: 40%;
+	color: #efefef;
+}
+
+.chart-legend{
+	padding: 10px 0;
+	font-family: "Roboto-Light";
+	color: #efefef;
+	font-size: 14px;
+}
+
+.chart-legend:last-of-type{
+	padding-bottom: 0;
+}
+
+.chart-legend span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	transform: translateY(3px);
 }
 
 .before-click{
@@ -235,4 +267,13 @@ h4{
 
 .before-click__description span{
 	font-family: "Roboto-Regular";
+}
+
+.data-sidebar__text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.data-sidebar__text::-webkit-scrollbar-thumb{
+	background-color: #242424;
+	border-radius: 5px;
 }
